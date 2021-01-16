@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+int main()
+{
+    char *locale = setlocale(LC_ALL, "");
+    int a = 0;
+    int answer = 0;
+    printf("Введите трехзначное число: ");
+    scanf("%d", &a);
+    a *= 10;
+    answer = a - (a/1000*1000) + a/1000;
+    printf("Перестановка цифр: %d", answer);
+    return 0;
+}
